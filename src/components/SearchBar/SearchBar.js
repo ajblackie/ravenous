@@ -14,6 +14,16 @@ class SearchBar extends React.Component {
             return <li key={sortByOptionValue}>{sortByOption}</li>
         });
     }
+
+    constructor(props) {
+      super(props);
+      this.state = {
+        term: ' ',
+        location: ' ',
+        sortBy: 'best_match'
+      };
+    }
+
     render () {
         return (<div className="SearchBar">
         <div className="SearchBar-sort-options">
